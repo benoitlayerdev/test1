@@ -1,0 +1,15 @@
+# Config et secrets (créés séparément sur chaque serveur)
+wp-config.php
+.htaccess
+
+# Contenu et fichiers générés (hors Git)
+wp-content/uploads/
+wp-content/cache/
+wp-content/upgrade/
+wp-content/backups/
+wp-content/debug.log
+wp-content/advanced-cache.php
+wp-content/object-cache.php
+wp-content/db.php
+*.log
+.DS_Store

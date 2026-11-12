@@ -1,0 +1,10 @@
+/*
+Theme Name: OVH Test
+Description: Thème témoin pour tester le déploiement Git sur OVH.
+Version: 1.0
+Author: Layerdev
+Text Domain: ovh-test
+*/
+
+body { font-family: system-ui, sans-serif; max-width: 720px; margin: 3rem auto; padding: 0 1rem; line-height: 1.6; color: #1a1a2e; }
+.deploy-marker { padding: 1rem 1.25rem; border-radius: 8px; background: #e8f0fe; border: 1px solid #b6ccf5; font-weight: 600; }
