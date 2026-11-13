@@ -1,10 +1,90 @@
 /*
 Theme Name: OVH Test
 Description: Thème témoin pour tester le déploiement Git sur OVH.
-Version: 1.0
+Version: 1.1
 Author: Layerdev
 Text Domain: ovh-test
 */
 
-body { font-family: system-ui, sans-serif; max-width: 720px; margin: 3rem auto; padding: 0 1rem; line-height: 1.6; color: #1a1a2e; }
-.deploy-marker { padding: 1rem 1.25rem; border-radius: 8px; background: #e8f0fe; border: 1px solid #b6ccf5; font-weight: 600; }
+:root {
+	--ink: #14213d;
+	--muted: #5c677d;
+	--bg: #f6f7fb;
+	--card: #ffffff;
+	--accent: #0b7a52;
+	--accent-soft: #e3f6ee;
+	--border: #dfe3ec;
+}
+
+* { box-sizing: border-box; }
+
+body {
+	font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+	max-width: 760px;
+	margin: 0 auto;
+	padding: 2.5rem 1rem 4rem;
+	line-height: 1.65;
+	color: var(--ink);
+	background: var(--bg);
+}
+
+a { color: var(--accent); }
+a:hover { text-decoration: none; }
+
+/* En-tête */
+.site-header { margin-bottom: 1.5rem; }
+.site-title { font-size: 2rem; font-weight: 800; color: var(--ink); text-decoration: none; letter-spacing: -0.02em; }
+.site-tagline { margin: 0.25rem 0 0; color: var(--muted); }
+.site-header nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1rem; padding: 0; margin: 1rem 0 0; }
+
+/* Bandeau de déploiement (v2 : vert, pour le distinguer de la v1 bleue) */
+.deploy-marker {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+	padding: 0.9rem 1.2rem;
+	border-radius: 10px;
+	background: var(--accent-soft);
+	border: 1px solid #a8dfc6;
+	color: var(--accent);
+	font-weight: 700;
+}
+.deploy-dot {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: var(--accent);
+	box-shadow: 0 0 0 0 rgba(11, 122, 82, 0.5);
+	animation: pulse 1.8s infinite;
+}
+@keyframes pulse {
+	70% { box-shadow: 0 0 0 10px rgba(11, 122, 82, 0); }
+	100% { box-shadow: 0 0 0 0 rgba(11, 122, 82, 0); }
+}
+
+/* Contenu */
+.card {
+	background: var(--card);
+	border: 1px solid var(--border);
+	border-radius: 12px;
+	padding: 1.25rem 1.5rem;
+	margin: 1.25rem 0;
+}
+.card h2 { margin: 0 0 0.25rem; font-size: 1.35rem; }
+.card h2 a { color: var(--ink); text-decoration: none; }
+.card h2 a:hover { color: var(--accent); }
+.post-meta { margin: 0 0 0.75rem; font-size: 0.875rem; color: var(--muted); }
+
+/* Pied de page */
+.site-footer {
+	margin-top: 3rem;
+	padding-top: 1.25rem;
+	border-top: 1px solid var(--border);
+	font-size: 0.85rem;
+	color: var(--muted);
+}
+.site-footer p { margin: 0.2rem 0; }
+
+@media (prefers-reduced-motion: reduce) {
+	.deploy-dot { animation: none; }
+}
