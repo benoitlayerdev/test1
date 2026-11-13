@@ -1,6 +1,6 @@
 <?php
 // Thème témoin : change la valeur ci-dessous pour vérifier qu'un déploiement a bien eu lieu.
-define( 'OVH_TEST_DEPLOY_MARKER', 'Version 2 - branche dev' );
+define( 'OVH_TEST_DEPLOY_MARKER', 'Version 3 - branche dev' );
 define( 'OVH_TEST_THEME_VERSION', '1.1' );
 
 add_action( 'after_setup_theme', function () {
