@@ -1,7 +1,7 @@
 <?php
 // Thème témoin : change la valeur ci-dessous pour vérifier qu'un déploiement a bien eu lieu.
-define( 'OVH_TEST_DEPLOY_MARKER', 'Version 5 - thème + extension' );
-define( 'OVH_TEST_THEME_VERSION', '1.2' );
+define( 'OVH_TEST_DEPLOY_MARKER', 'Version 6 - multi-fichiers' );
+define( 'OVH_TEST_THEME_VERSION', '1.3' );
 
 add_action( 'after_setup_theme', function () {
 	add_theme_support( 'title-tag' );
@@ -33,5 +33,9 @@ function ovh_test_deploy_info() {
 		'plugin'   => function_exists( 'ovh_test_deploy_plugin_version' )
 			? 'active (v' . ovh_test_deploy_plugin_version() . ')'
 			: 'inactive ou absente',
+		// Le MU-plugin, lui, est chargé automatiquement dès que le fichier est sur le serveur.
+		'mu'       => function_exists( 'ovh_deploy_check_mu_version' )
+			? 'chargé (v' . ovh_deploy_check_mu_version() . ')'
+			: 'absent',
 	);
 }
