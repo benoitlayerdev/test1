@@ -1,7 +1,7 @@
 <?php
 // Thème témoin : change la valeur ci-dessous pour vérifier qu'un déploiement a bien eu lieu.
-define( 'OVH_TEST_DEPLOY_MARKER', 'Version 4 - test médias' );
-define( 'OVH_TEST_THEME_VERSION', '1.1' );
+define( 'OVH_TEST_DEPLOY_MARKER', 'Version 5 - thème + extension' );
+define( 'OVH_TEST_THEME_VERSION', '1.2' );
 
 add_action( 'after_setup_theme', function () {
 	add_theme_support( 'title-tag' );
@@ -29,5 +29,9 @@ function ovh_test_deploy_info() {
 		'deployed' => wp_date( 'd/m/Y H:i:s', filemtime( __FILE__ ) ),
 		'php'      => PHP_VERSION,
 		'wp'       => get_bloginfo( 'version' ),
+		// L'extension est déployée par Git, mais son activation est stockée en base de données.
+		'plugin'   => function_exists( 'ovh_test_deploy_plugin_version' )
+			? 'active (v' . ovh_test_deploy_plugin_version() . ')'
+			: 'inactive ou absente',
 	);
 }
