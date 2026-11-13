@@ -1,7 +1,7 @@
 /*
 Theme Name: OVH Test
 Description: Thème témoin pour tester le déploiement Git sur OVH.
-Version: 1.1
+Version: 1.2
 Author: Layerdev
 Text Domain: ovh-test
 */
@@ -11,8 +11,8 @@ Text Domain: ovh-test
 	--muted: #5c677d;
 	--bg: #f6f7fb;
 	--card: #ffffff;
-	--accent: #0b7a52;
-	--accent-soft: #e3f6ee;
+	--accent: #5b3cc4;
+	--accent-soft: #efeafd;
 	--border: #dfe3ec;
 }
 
@@ -37,7 +37,7 @@ a:hover { text-decoration: none; }
 .site-tagline { margin: 0.25rem 0 0; color: var(--muted); }
 .site-header nav ul { list-style: none; display: flex; flex-wrap: wrap; gap: 1rem; padding: 0; margin: 1rem 0 0; }
 
-/* Bandeau de déploiement (v2 : vert, pour le distinguer de la v1 bleue) */
+/* Bandeau de déploiement (v5 : violet ; v2-v4 étaient vertes, v1 bleue) */
 .deploy-marker {
 	display: flex;
 	align-items: center;
@@ -45,7 +45,7 @@ a:hover { text-decoration: none; }
 	padding: 0.9rem 1.2rem;
 	border-radius: 10px;
 	background: var(--accent-soft);
-	border: 1px solid #a8dfc6;
+	border: 1px solid #cfc2f5;
 	color: var(--accent);
 	font-weight: 700;
 }
@@ -54,12 +54,12 @@ a:hover { text-decoration: none; }
 	height: 10px;
 	border-radius: 50%;
 	background: var(--accent);
-	box-shadow: 0 0 0 0 rgba(11, 122, 82, 0.5);
+	box-shadow: 0 0 0 0 rgba(91, 60, 196, 0.5);
 	animation: pulse 1.8s infinite;
 }
 @keyframes pulse {
-	70% { box-shadow: 0 0 0 10px rgba(11, 122, 82, 0); }
-	100% { box-shadow: 0 0 0 0 rgba(11, 122, 82, 0); }
+	70% { box-shadow: 0 0 0 10px rgba(91, 60, 196, 0); }
+	100% { box-shadow: 0 0 0 0 rgba(91, 60, 196, 0); }
 }
 
 /* Contenu */
