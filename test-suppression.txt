@@ -1,3 +1,0 @@
-Fichier témoin pour tester la suppression.
-1. Déployer avec ce fichier : /deploy-check.php doit afficher "présent".
-2. Le supprimer du dépôt, redéployer : "absent" = OVH supprime les fichiers retirés du dépôt ; "présent" = il ne supprime jamais.
